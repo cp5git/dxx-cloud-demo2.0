@@ -1,6 +1,6 @@
 package com.dxx.producer1;
 
-import com.dxx.authclient.AuthClient;
+import com.dxx.authclient.EnableAuthClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -12,7 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @ServletComponentScan
 //开启鉴权
-@AuthClient
+@EnableAuthClient
 public class Producer1Application {
 
     public static void main(String[] args) {

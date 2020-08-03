@@ -41,3 +41,15 @@
 #### 模块名称：用户角色资源管理服务
 #### 实现方式：eureka、mybatis、mysql
 #### 模块说明: 提供基于用户角色的资源管理功能，数据初始化脚本参见rbac.sql
+
+### 7.producer1
+#### 模块名称：生产者服务
+#### 实现方式： fegin、eureka
+#### 模块说明: 引入auth-client，用于测试鉴权功能
+
+### 8.consumer
+#### 模块名称：消费者服务
+#### 实现方式： fegin、eureka、hystrix
+#### 模块说明: 用于测试restful api、负载均衡、熔断
+
+

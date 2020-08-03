@@ -1,0 +1,7 @@
+myname: cp5
+
+server:
+  port: 8080
+spring:
+  application:
+    name: common

@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: gateway
+
+#屏蔽敏感信息访问请求
+zuul:
+  ignored-patterns: /**/security/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level:
+    ROOT: info
+
+ribbon:
+  ReadTimeout: 5000
+  SocketTimeout: 5000

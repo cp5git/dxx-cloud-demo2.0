@@ -7,8 +7,8 @@
         <artifactId>dxx-cloud-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>gateway</artifactId>
-    <name>gateway</name>
+    <artifactId>zuul</artifactId>
+    <name>zuul</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>

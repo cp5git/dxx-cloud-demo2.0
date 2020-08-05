@@ -50,6 +50,22 @@ public class UserController {
         }
     }
 
+    /**
+     * 测试事务回滚
+     * @return
+     */
+    @RequestMapping("/test/transaction")
+    public CommonResponse testTransaction(){
+
+        try {
+            userService.testTransaction();
+            return new CommonResponse(ResponseCode.SUCCESS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new CommonResponse(ResponseCode.FAIL);
+        }
+    }
+
 
 
 }

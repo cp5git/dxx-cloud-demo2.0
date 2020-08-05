@@ -10,7 +10,7 @@ spring:
           enabled: true
           lower-case-service-id: true
 
-#允许跨域请求
+      #允许跨域请求
       globalcors:
         cors-configurations:
           '[/**]':

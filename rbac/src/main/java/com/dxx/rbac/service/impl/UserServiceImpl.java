@@ -5,6 +5,7 @@ import com.dxx.rbac.model.User;
 import com.dxx.rbac.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 用户Service实现类
@@ -26,5 +27,24 @@ public class UserServiceImpl implements UserService {
     public User findByAccount(String account) {
 
         return userMapper.findByAccount(account);
+    }
+
+    /**
+     * 测试事务回滚
+     * @throws Exception
+     */
+    @Override
+    @Transactional
+    public void testTransaction() throws Exception {
+
+        String name="newName";
+        String id1="TEST001";
+
+
+        userMapper.updateUserName(name,id1);
+
+        int i=1/0;
+
+
     }
 }

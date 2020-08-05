@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableEurekaClient
 //开启鉴权
-@EnableAuthClient
+//@EnableAuthClient
 //开启事务
 @EnableTransactionManagement
 public class RbacApplication {

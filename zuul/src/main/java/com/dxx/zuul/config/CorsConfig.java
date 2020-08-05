@@ -1,4 +1,4 @@
-package com.dxx.gateway.config;
+package com.dxx.zuul.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

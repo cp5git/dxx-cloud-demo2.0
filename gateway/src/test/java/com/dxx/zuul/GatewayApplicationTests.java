@@ -1,4 +1,4 @@
-package com.dxx.gateway;
+package com.dxx.zuul;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

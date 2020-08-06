@@ -4,6 +4,11 @@ server:
 logging:
   level:
     ROOT: info
+  # 配置日志存放路径,日志文件名为：spring.log
+  file:
+    # 设置日志文件大小
+    max-size: 10MB
+    name: ../log/${spring.application.name}.log
 
 spring:
   application:

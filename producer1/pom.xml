@@ -11,6 +11,10 @@
     <name>producer1</name>
     <description>Demo project for Spring Boot</description>
 
+    <properties>
+        <auth-client.version>0.0.1-SNAPSHOT</auth-client.version>
+    </properties>
+
     <dependencies>
 
         <dependency>
@@ -21,7 +25,7 @@
         <dependency>
             <groupId>com.dxx</groupId>
             <artifactId>auth-client</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${auth-client.version}</version>
         </dependency>
 
         <dependency>

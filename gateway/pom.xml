@@ -11,7 +11,17 @@
     <name>gateway</name>
     <description>Demo project for Spring Boot</description>
 
+    <properties>
+        <common.version>0.0.1-SNAPSHOT</common.version>
+    </properties>
+
     <dependencies>
+
+        <dependency>
+            <groupId>com.dxx</groupId>
+            <artifactId>common</artifactId>
+            <version>${common.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>

@@ -1,5 +1,5 @@
 server:
-  port: 9999
+  port: 8888
 spring:
   application:
     name: gateway
@@ -30,7 +30,7 @@ eureka:
 
 logging:
   level:
-    org.springframework.cloud.gateway: debug
+    com.dxx: info
 
 #配置需要拦截的请求
 ignored:

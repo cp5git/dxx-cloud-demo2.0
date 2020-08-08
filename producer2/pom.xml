@@ -12,11 +12,17 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>11</java.version>
-        <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+        <auth-client.version>0.0.1-SNAPSHOT</auth-client.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.dxx</groupId>
+            <artifactId>auth-client</artifactId>
+            <version>${auth-client.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

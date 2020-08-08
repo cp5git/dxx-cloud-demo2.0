@@ -1,5 +1,7 @@
 package com.dxx.gateway.filter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -22,6 +24,8 @@ import java.util.List;
 @ConfigurationProperties(prefix = "ignored")
 public class IgnoredFilter implements GlobalFilter, Ordered {
 
+    private Logger logger= LoggerFactory.getLogger(IgnoredFilter.class);
+
     private List<String> urls ;
 
     @Override
@@ -36,6 +40,9 @@ public class IgnoredFilter implements GlobalFilter, Ordered {
             if(antPathMatcher.match(pattern, path)){
                 ServerHttpResponse response = exchange.getResponse();
                 response.setStatusCode(HttpStatus.NOT_FOUND);
+
+                logger.debug("ignore path:"+path);
+
                 return response.setComplete();
             }
         }
@@ -45,7 +52,7 @@ public class IgnoredFilter implements GlobalFilter, Ordered {
 
     @Override
     public int getOrder() {
-        return -1;
+        return -2;
     }
 
     public List<String> getUrls() {

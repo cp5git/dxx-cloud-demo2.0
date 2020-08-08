@@ -11,12 +11,18 @@
     <name>zuul</name>
     <description>Demo project for Spring Boot</description>
 
+    <properties>
+        <common.version>0.0.1-SNAPSHOT</common.version>
+        <apmToolkitTrace.version>8.1.0</apmToolkitTrace.version>
+        <apmToolkitLogback.version>8.1.0</apmToolkitLogback.version>
+    </properties>
+
     <dependencies>
 
         <dependency>
             <groupId>com.dxx</groupId>
             <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${common.version}</version>
         </dependency>
 
         <dependency>
@@ -32,6 +38,20 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- skywalking 代码交互组件 -->
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-trace</artifactId>
+            <version>${apmToolkitTrace.version}</version>
+        </dependency>
+
+        <!-- skywalking日志插件 -->
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-logback-1.x</artifactId>
+            <version>${apmToolkitLogback.version}</version>
         </dependency>
 
     </dependencies>
